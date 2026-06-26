@@ -211,7 +211,7 @@ class Panel(ScreenPanel):
     def __init__(self, screen, title):
         title = title or ("AFC Status")
         super().__init__(screen, title)
-        self.apiClient = screen.apiclient
+        self.apiClient = screen.restApi
         self.lane_widgets = {}
         AFClane.theme_path = screen.theme
         logging.info(f"Theme path: {AFClane.theme_path}")
